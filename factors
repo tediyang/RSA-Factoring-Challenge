@@ -17,6 +17,3 @@ def factors():
                     break
                 else:
                     div += 1
-
-if __name__ == "__main__":
-    factors()
