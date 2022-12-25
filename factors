@@ -3,4 +3,19 @@
 import sys
 
 def factors():
+    with open(sys.argv[1], "r") as f:
+        lines = f.readlines()
+        num_list = [int(i) for i in lines]
 
+        for num in num_list:
+            div = 2
+            while div < num:
+                if num % div == 0:
+                    f = num // div
+                    print("{}={}*{}".format(num, f, div))
+                    break
+                else:
+                    div += 1
+
+if __name__ == "__main__":
+    factors()
